@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-external-apps" version="0.0.1">
+   <name>ExternalApps</name>
+   <js-module name="ExternalApps" src="www/external-apps.js">
+      <clobbers target="ExternalApps" />
+   </js-module>
+   <platform name="android">
+      <config-file parent="/*" target="res/xml/config.xml">
+         <feature name="ExternalApps">
+            <param name="android-package" value="com.nostalgictouch.cordova.plugins.ExternalApps" />
+         </feature>
+      </config-file>
+      <config-file parent="/*" target="AndroidManifest.xml" />
+      <source-file src="src/android/ExternalApps.java" target-dir="src/com/nostalgictouch/cordova/plugins" />
+   </platform>
+</plugin>
