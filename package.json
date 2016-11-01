@@ -1,0 +1,25 @@
+{
+  "name": "ExternalApps",
+  "version": "0.0.1",
+  "description": "A Cordova plugin that lists apps that can open a file, based on the url, mime type or kind (navigation e.g.)",
+  "cordova": {
+    "id": "cordova-plugin-external-apps",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duduBaiao/cordova-plugin-external-apps.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Eduardo Baião",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/duduBaiao/cordova-plugin-external-apps/issues"
+  },
+  "homepage": "https://github.com/duduBaiao/cordova-plugin-external-apps#readme"
+}
