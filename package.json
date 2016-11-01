@@ -1,5 +1,5 @@
 {
-  "name": "ExternalApps",
+  "name": "cordova-plugin-external-apps",
   "version": "0.0.1",
   "description": "A Cordova plugin that lists apps that can open a file, based on the url, mime type or kind (navigation e.g.)",
   "cordova": {
