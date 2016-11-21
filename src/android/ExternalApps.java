@@ -15,6 +15,8 @@ import org.json.JSONObject;
 import java.util.Arrays;
 import java.util.List;
 
+import android.os.Environment;
+
 public class ExternalApps extends CordovaPlugin {
     
     protected static final String TAG = ExternalApps.class.getSimpleName();
@@ -23,6 +25,7 @@ public class ExternalApps extends CordovaPlugin {
     private String CAN_OPEN = "canOpen";
     private String OPEN = "open";
     private String CHOOSE_AND_OPEN = "chooseAndOpen";
+    private String GET_DOWNLOADS_FOLDER = "getDownloadsFolder";
     
     private String NAVIGATION = "navigation";
     
@@ -63,7 +66,12 @@ public class ExternalApps extends CordovaPlugin {
             chooseAndOpen(title, uri, mimeType, callbackContext);
             return true;
         }
+        else if (GET_DOWNLOADS_FOLDER.equals(action)) {
 
+            callbackContext.success(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath());
+
+            return true;
+        }
         return false;
     }
 
