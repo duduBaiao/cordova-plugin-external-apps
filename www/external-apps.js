@@ -42,7 +42,17 @@ var ExternalApps = {
             'ExternalApps',
             'chooseAndOpen',
             [title || DIALOG_TITLE, uri, mimeType || ""]);
-    }
+    },
+
+    getDownloadsFolder: function(successCallback) {
+
+        cordova.exec(
+            successCallback,
+            null,
+            'ExternalApps',
+            'getDownloadsFolder',
+            []);
+    }    
 };
 
 module.exports = ExternalApps;
